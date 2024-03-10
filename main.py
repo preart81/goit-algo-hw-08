@@ -8,8 +8,6 @@
 
 import heapq
 
-set
-
 
 def merge_cables(cables: list, debug: bool = False) -> tuple:
     """
