@@ -19,8 +19,8 @@ def merge_cables(cables: list, debug: bool = False) -> tuple:
         cables (list): список кабелів (кожен елемент - довжина кабеля)
         debug (bool): флаг для виводу додаткової інформації
     """
-    heap = cables.copy()
     merge_order = []
+    heap = cables.copy()
     heapq.heapify(heap)
     if debug:
         print("Початковий стан купи:")
@@ -43,7 +43,10 @@ def merge_cables(cables: list, debug: bool = False) -> tuple:
 if __name__ == "__main__":
     cables = [5, 8, 12, 13, 2, 1, 4]
     # cables = [-5, -8, -12, -13, -2, -1, -4]
+    print(f"Відкрізки кабелів:\n{cables}")
+
     merge_order, total_cost = merge_cables(cables, debug=True)
+
     print(f"Порядок об'єднання кабелів: {merge_order}")
     print(f"Загальні витрати: {total_cost}")
     print(f"{cables = }")
